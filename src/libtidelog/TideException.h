@@ -17,4 +17,25 @@
  *
  * ============================================================ */
 
-#include <Channel.h>
+#pragma once
+
+
+
+class TIDEException : public std::exception {
+private:
+    const std::string msg;
+public:
+    TIDEException(const std::string&);
+    ~TIDEException() throw ();
+    virtual const char* what() const throw ();
+};
+
+class IOException : public TIDEException {
+public:
+    IOException(const std::string& msg);
+};
+
+class IllegalArgumentException : public TIDEException {
+public:
+    IllegalArgumentException(const std::string& msg);
+};

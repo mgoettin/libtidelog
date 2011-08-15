@@ -17,4 +17,7 @@
  *
  * ============================================================ */
 
-#include <Channel.h>
+#include <stdint.h>
+
+#include <TideStruct.h>
+
